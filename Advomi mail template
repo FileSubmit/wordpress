@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;UTF-8" />
+  
+    <style>
+    @media screen and (max-width: 480px) {
+    	
+      div.wrapper {width:90%!important;margin-top:10px!important}
+      }
+    </style>
+  </head>
+  <body style="margin: 0px; background-color: #F4F3F4; font-family: Helvetica, Arial, sans-serif; font-size:16px;" text="#444444" bgcolor="#F4F3F4" link="#21759B" alink="#21759B" vlink="#21759B" marginheight="0" topmargin="0" marginwidth="0" leftmargin="0">
+      
+	  <div class="wrapper" style="width:80%;background-color:white;margin:0px auto;margin-top:40px;border:1px solid #d9d9d9;padding:20px">
+	  <div class="header"><a style="text-decoration: none;" href="https://beta.advomi.com.sg" target="_blank""><img style="width: 120px;" src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/Advomi_logo-dark-horizontal.svg" /></a></div>
+	  <div class="body" style="padding:30px 0px;margin:20px 0px;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;">%content%
+	  <br><br>Best Regards,<br>
+	  The Advomi Team
+	  </div>
+	  <div class="footer" style="font-size:12px">
+	  <div style=" padding-bottom: 1px;"><img style="vertical-align: middle;" src="https://beta.advomi.com.sg/wp-admin/images/date-button.gif" alt="Date" width="13" height="13" /> Email sent %date% @ %time%</div>
+      <div><img style="vertical-align: middle;" src="https://beta.advomi.com.sg/wp-admin/images/comment-grey-bubble.png" alt="Contact" width="12" height="12" /> For any questions, please contact <a href="mailto:admin@advomi.com.sg">admin@advomi.com.sg</a></div>
+	 </div>
+        
+	  </div>
+      <div class="wrapper" style="width:80%;margin:0px auto;padding:20px;text-align:center;font-size:12px">
+        <div style="margin-bottom:10px"><a href="https://www.facebook.com/advomi/"><img src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/advomi-facebook-social@2x.png" style="width:25px"></a> <a href="https://twitter.com/advomihq"><img src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/advomi-twitter.png" style="width:25px"></a> <a href="https://www.linkedin.com/company/advomi/"><img src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/advomi-linkedin.png" style="width:25px"></a> <a href="https://www.instagram.com/advomihq/"><img src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/advomi-instagram.png" style="width:25px"></a> <a href="https://www.youtube.com/channel/UCU81hSYMufgMdL_qrYF7TpA"><img src="https://beta.advomi.com.sg/wp-content/uploads/2019/05/advomi-youtube.png" style="width:25px"></a></div>
+        <a href="https://beta.advomi.com.sg/terms-of-service/">Terms of Service</a> | <a href="https://beta.advomi.com.sg/privacy-policy/">Privacy Policy</a> | <a href="mailto:admin@advomi.com.sg">Contact Support</a><br><br>
+28C Stanley Street, Singapore, 068737<br>
+© 2019 Advomi Pte Ltd.
+        	  </div>
+  </body>
+</html>
