@@ -1,3 +1,4 @@
+<?php 
 if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 	function advmi_wpj_latest_jobs( $cols = 3, $load_type = 'load_more' ) {
 		$meta_querya = array( array(
@@ -15,7 +16,7 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 				'post_status'    =>'publish',
 				'paged'          => 1,
 				'posts_per_page' => 1,
-				'post__in'		 => 2663,
+				'post__in'		 => array(2663,2653),
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya ,
 				'meta_key'       => 'home_featured_now',
@@ -26,7 +27,7 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 				'post_status'    =>'publish',
 				'paged'          => 1,
 				'posts_per_page' => 1,
-				'post__in'		 => 2663,
+				'post__in'		 => array(2663,2653),
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya,
 				'orderby' => 'post__in', 
