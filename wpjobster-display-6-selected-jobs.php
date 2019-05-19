@@ -15,7 +15,7 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 			$args = array(
 				'post_status'    =>'publish',
 				'paged'          => 1,
-				'posts_per_page' => 1,
+				'posts_per_page' => 3,
 				'post__in'	 => array(2663,2653),
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya ,
@@ -26,7 +26,7 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 			$args = array(
 				'post_status'    =>'publish',
 				'paged'          => 1,
-				'posts_per_page' => 1,
+				'posts_per_page' => 3,
 				'post__in'	 => array(2663,2653),
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya,
