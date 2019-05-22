@@ -1,22 +1,24 @@
 <?php 
-if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
-	function advmi_wpj_latest_jobs( $cols = 3, $load_type = 'load_more' ) {
-		$meta_querya = array( array(
+if (!function_exists('advmi_job_listings_display_custom')) {
+	function advmi_job_listings_display_custom( $atts ) {
+		ob_start();
+		
+	$meta_querya = array( array(
 			'key'     => 'active',
 			'value'   => "1",
 			'compare' => '='
 		) );
 		
-		#extract(shortcode_atts(array('id' => null), $atts, 'fsgrid'));    
-		#$post_ids = explode(",", strval($id));
+	$atts = extract(shortcode_atts(array('ids' => null), $atts));    
+	$post_ids = explode(",", strval($ids));	
 		
-		$feature_enabled = get_option('wpjobster_featured_enable');
+	$feature_enabled = get_option('wpjobster_featured_enable');
 		if ( $feature_enabled == 'yes' ) {
 			$args = array(
 				'post_status'    =>'publish',
 				'paged'          => 1,
-				'posts_per_page' => 3,
-				'post__in'	 => array(2663,2653),
+				'posts_per_page' => 4,
+				'post__in'	 => $post_ids,
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya ,
 				'meta_key'       => 'home_featured_now',
@@ -26,14 +28,13 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 			$args = array(
 				'post_status'    =>'publish',
 				'paged'          => 1,
-				'posts_per_page' => 3,
-				'post__in'	 => array(2663,2653),
+				'posts_per_page' => 4,
+				'post__in'	 => $post_ids,
 				'post_type'      => 'job',
 				'meta_query'     => $meta_querya,
 				'orderby' => 'post__in', 
 			);
 		}
-
 		if ( $cols == 3 ) {
 			$wpj_job = new WPJ_Load_More_Posts( $args + array ( 'function_name' => wpj_get_job_card_style(), 'container_class' => 'ui three cards ', 'load_type' => $load_type ) );
 		} else {
@@ -51,20 +52,12 @@ if ( !function_exists( 'advmi_wpj_latest_jobs' ) ) {
 				} ?>
 			</div>
 		</div>
-	<?php }
-}
-
-// Job Listing Shortcode for Popular in SG [job_listings_3]
-if (!function_exists('advmi_job_listings_3_s')) {
-	function advmi_job_listings_3_s() {
-		ob_start();
-
-		advmi_wpj_latest_jobs( 3 );
-
-		$output = ob_get_contents();
-		ob_end_clean();
+<?php	
+		
+	$output = ob_get_contents();
+	ob_end_clean();
 
 		return $output;
 	}
 }
-wpj_add_shortcode( 'advmi_sg', 'advmi_job_listings_3_s' );
+add_shortcode( 'advmi_job_display', 'advmi_job_listings_display_custom' );
